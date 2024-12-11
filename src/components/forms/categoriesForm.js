@@ -3,11 +3,12 @@ import SideBar from "../main_and_side_Bar/sideBar";
 import axios from "axios";
 
 const CategoriesForm = () => {
+  const APIURL = process.env.REACT_APP_API_URL;
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = new FormData(e.target);
     axios
-      .post("https://node.api.design-house.art/server/v1/categories/add", data, {
+      .post(`${APIURL}/server/v1/categories/add`, data, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

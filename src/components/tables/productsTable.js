@@ -4,17 +4,17 @@ import DeleteAPI from "../APIs/deleteAPI";
 
 const ProductsTable = () => {
   const [products, setProducts] = useState([]);
-
+  const APIURL = process.env.REACT_APP_API_URL;
   useEffect(() => {
     axios
-      .get("https://node.api.design-house.art/server/v1/display/projects")
+      .get(`${APIURL}/server/v1/display/projects`)
       .then((response) => {
         setProducts(response.data.projectsArr);
       })
       .catch((err) => {
         console.log("err :>> ", err);
       });
-  }, []);
+  }, [APIURL]);
   const productsData = ()=>{
     return products.map((item)=>(
       <>

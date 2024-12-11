@@ -3,7 +3,8 @@ import axios from "axios";
 const SelectedProjects = ({ selectedCategory }) => {
   const [projects, setProjects] = useState([]);
   const cardRefs = useRef([]);
-  const apiURL = `https://node.api.design-house.art/server/v1/display/select-projects?selectedCategory=${selectedCategory}`;
+  const APIURL = process.env.REACT_APP_API_URL;
+  const apiURL = `${APIURL}/server/v1/display/select-projects?selectedCategory=${selectedCategory}`;
   useEffect(() => {
     axios
       .get(apiURL)
@@ -74,7 +75,7 @@ const SelectedProjects = ({ selectedCategory }) => {
                 </span>
               </h3>
               <img
-                src={`https://node.api.design-house.art/uploads/productCoverImg/${project.coverPhoto}`}
+                src={`${APIURL}/uploads/productCoverImg/${project.coverPhoto}`}
                 width={"100%"}
                 alt="..."
                 style={{
@@ -100,7 +101,7 @@ const SelectedProjects = ({ selectedCategory }) => {
                   .map((projectImg, imgIndex) => (
                     <img
                       key={imgIndex}
-                      src={`https://node.api.design-house.art/uploads/productImgs/${projectImg.trim()}`}
+                      src={`${APIURL}/uploads/productImgs/${projectImg.trim()}`}
                       alt={`Project ${imgIndex + 1}`}
                       style={{
                         margin: "5px 2px",

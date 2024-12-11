@@ -3,10 +3,10 @@ import axios from "axios";
 
 const AccountsForm = () => {
   const [accounts, setAccounts] = useState(null); // Set initial state to null to indicate loading
-
+  const APIURL = process.env.REACT_APP_API_URL;
   useEffect(() => {
     axios
-      .get("https://node.api.design-house.art/server/v1/display/accounts")
+      .get(`${APIURL}/server/v1/display/accounts`)
       .then((response) => {
         setAccounts(response.data.accountsObj || {}); // Default to an empty object if no data
         console.log("response.data.accountsObj:", response.data.accountsObj);
@@ -14,7 +14,7 @@ const AccountsForm = () => {
       .catch((error) => {
         console.error("Error fetching Accounts data:", error);
       });
-  }, []);
+  }, [APIURL]);
 
   if (!accounts) {
     // Display a loading state or message until the data is fetched
@@ -48,7 +48,7 @@ const handleInputChange = (e) => {
 
     axios
       .post(
-        `https://node.api.design-house.art/server/v1/accounts/update/${accounts._id}`,
+        `${APIURL}/server/v1/accounts/update/${accounts._id}`,
         formData,
         config
       )

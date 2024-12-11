@@ -5,10 +5,11 @@ const Footer = () => {
   const [accounts, setAccounts] = useState(null); // Set initial state to null to indicate loading
   const [aboutUsContent, setAboutUsContent] = useState(null);
   const footerRefs = useRef([]); // Refs for animated sections
+  const APIURL = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     axios
-      .get("https://node.api.design-house.art/server/v1/display/accounts")
+      .get(`${APIURL}/server/v1/display/accounts`)
       .then((response) => {
         setAccounts(response.data.accountsObj);
       })
@@ -16,14 +17,14 @@ const Footer = () => {
         console.error("Error fetching Accounts data:", error);
       });
     axios
-      .get("https://node.api.design-house.art/server/v1/display/aboutUs")
+      .get(`${APIURL}/server/v1/display/aboutUs`)
       .then((response) => {
         setAboutUsContent(response.data.aboutUsContentObj);
       })
       .catch((err) => {
         console.log("err :>> ", err);
       });
-  }, []);
+  }, [APIURL]);
 
   useEffect(() => {
     // Set up IntersectionObserver

@@ -37,6 +37,7 @@ body{
   display: flex;
   flex-direction: column;
   width: 250px;
+  color:#000000;
 }
 
 
@@ -68,7 +69,6 @@ nav{
       color: transparent;
 }
 .navbar-nav{
-  color: #f0f0f0;
   font-weight: bolder;
 }
 #cover{
@@ -135,14 +135,6 @@ textarea{
 }
 
 
-.pageContent {
-  border-radius: 30px;
-  border: black 1px solid;
-  background-color: rgba(255, 255, 255, 0.293);
-  padding: 2% 10% 5% 5%;
-  margin: auto;
-  color: whitesmoke;
-}
 /* إعدادات الحاوية */
 .image-container {
   position: relative;

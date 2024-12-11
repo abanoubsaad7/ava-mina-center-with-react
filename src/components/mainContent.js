@@ -2,7 +2,7 @@ import React from "react";
 
 const MainContent = () => {
   return (
-    <div className="row container" style={{ direction: "rtl" ,marginTop:"-15%", paddingBlock:"4%" }}>
+    <div className="row container" style={{ direction: "rtl" , paddingBlock:"4%" }}>
       <div className="col-lg-5">
         <h1>مركز الكورسات المتخصصة</h1>
         <br />

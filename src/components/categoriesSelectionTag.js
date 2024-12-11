@@ -3,17 +3,17 @@ import axios from "axios";
 
 const CategoriesSelectionTag = ({ nameOfListBox , onCategoryChange }) => {
   const [categories, setCategories] = useState([]);
-
+  const APIURL = process.env.REACT_APP_API_URL;
   useEffect(() => {
     axios
-      .get("https://node.api.design-house.art/server/v1/display/categories")
+      .get(`${APIURL}/server/v1/display/categories`)
       .then((response) => {
         setCategories(response.data.categoriesArr);
       })
       .catch((err) => {
         console.log("err :>> ", err);
       });
-  }, [nameOfListBox]);
+  }, [nameOfListBox,APIURL]);
 
   const handleSelection = (event) => {
     onCategoryChange(event.target.value);

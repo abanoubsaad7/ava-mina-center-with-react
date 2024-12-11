@@ -3,10 +3,10 @@ import axios from 'axios';
 
 const AboutUsForm = () => {
     const [aboutUs, setAboutUs] = useState(null);
-
+    const APIURL = process.env.REACT_APP_API_URL;
     // Fetch data from API when the component mounts
     useEffect(() => {
-        axios.get('https://node.api.design-house.art/server/v1/display/aboutUs')
+        axios.get(`${APIURL}/server/v1/display/aboutUs`)
             .then((response) => {
                 const { aboutUsContentObj } = response.data;
                 if (aboutUsContentObj) {
@@ -16,7 +16,7 @@ const AboutUsForm = () => {
             .catch((error) => {
                 console.error('Error fetching About Us data:', error);
             });
-    }, []);
+    }, [APIURL]);
     if (!aboutUs) {
         return <div>Loading data...</div>;
       }
@@ -40,7 +40,7 @@ const AboutUsForm = () => {
 
     axios
       .post(
-        `https://node.api.design-house.art/server/v1/aboutUs/update/${aboutUs._id}`,
+        `${APIURL}/server/v1/aboutUs/update/${aboutUs._id}`,
         formData,
         config
       )

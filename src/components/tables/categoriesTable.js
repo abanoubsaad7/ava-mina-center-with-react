@@ -4,17 +4,17 @@ import DeleteAPI from "../APIs/deleteAPI";
 
 const CategoriesTable = () => {
   const [categories, setCategories] = useState([]);
-
+  const APIURL = process.env.REACT_APP_API_URL;
   useEffect(() => {
     axios
-      .get("https://node.api.design-house.art/server/v1/display/categories")
+      .get(`${APIURL}/server/v1/display/categories`)
       .then((response) => {
         setCategories(response.data.categoriesArr);
       })
       .catch((err) => {
         console.log("err :>> ", err);
       });
-  }, []);
+  }, [APIURL]);
 
   const categoriesData = ()=>{
     return categories.map((item)=>(

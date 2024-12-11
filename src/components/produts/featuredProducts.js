@@ -4,18 +4,18 @@ import axios from "axios";
 const FeaturedProducts = () => {
   const [categories, setCategories] = useState([]);
   const cardRefs = useRef([]);
-
+  const APIURL = process.env.REACT_APP_API_URL;
   useEffect(() => {
     // Fetch categories
     axios
-      .get("https://node.api.design-house.art/server/v1/display/categories")
+      .get(`${APIURL}/server/v1/display/categories`)
       .then((response) => {
         setCategories(response.data.categoriesArr);
       })
       .catch((err) => {
         console.log("err :>> ", err);
       });
-  }, []);
+  }, [APIURL]);
 
   useEffect(() => {
     // Set up IntersectionObserver
@@ -49,7 +49,7 @@ const FeaturedProducts = () => {
       >
         <div className="card" style={{ width: "18rem"}}>
           <img
-            src={`https://node.api.design-house.art/uploads/categoriesCoverImg/${item.img}`}
+            src={`${APIURL}/uploads/categoriesCoverImg/${item.img}`}
             className="card-img-top"
             alt="..."
           />

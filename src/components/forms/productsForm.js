@@ -5,11 +5,12 @@ import axios from "axios";
 
 const ProductsForm = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
+  const APIURL = process.env.REACT_APP_API_URL;
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = new FormData(e.target);
     axios
-      .post("https://node.api.design-house.art/server/v1/projects/add", data, {
+      .post(`${APIURL}/server/v1/projects/add`, data, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

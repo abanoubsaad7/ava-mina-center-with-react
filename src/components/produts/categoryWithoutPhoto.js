@@ -5,7 +5,6 @@ const CategoryWithoutPhoto = () => {
   const [categories, setCategories] = useState([]);
   const cardRefs = useRef([]);
   const APIURL = process.env.REACT_APP_API_URL;
-  console.log('API_URLll :>> ', APIURL);
   useEffect(() => {
     // Fetch categories
     axios
