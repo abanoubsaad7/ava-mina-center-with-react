@@ -1,14 +1,25 @@
-body {
-  background-image: url("./img/body-bg.png") ;
+body{
+  background-image: linear-gradient(to bottom right , #3a99d1 ,#f0f0f0 ,#1b71d9);
+}
+
+.firstContent {
   background-blend-mode: normal; 
   background-size: cover; /* Adjust the image size */
   background-repeat: no-repeat;
-  color: var(--color1);
+}
+.categoryList{
+  background-blend-mode: normal; 
+  background-size: cover; /* Adjust the image size */
 }
 
 :root{
   --color1: #f0f0f0;
-  --color2: #FA961F;
+  --color2: #0976bb;
+}
+
+.logo{
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
+  object-fit: contain;
 }
 
 .dev{
@@ -35,17 +46,17 @@ body {
   margin: 0% 10%;
   font-size: larger;
 }
-/* nav{
-  position: relative; 
-  top: 0;
-  left: 0;
+nav{
   z-index: 10; 
   color: white;
+  margin-bottom: 3.7% ;
   padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
-} */
+  background-image: linear-gradient(to top right , #3a99d1 ,#f0f0f0 , #f0f0f0 ,#3a99d1 ,#1064ca);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.077); 
+}
+
 .navbar ul li a:hover {
-  color: #FFD700; /* لون عند التمرير */
+  color: var(--color2); /* لون عند التمرير */
 }
 .navbar-brand{
   font-size: 35px;
@@ -85,9 +96,11 @@ body {
   padding: 100px 20px;
 }
 svg{
-  z-index: -1;
+  z-index: -2;
+  height: 50%;
+  margin-top: -10%;
   position: sticky;
-  top: -30px;
+  top: -10%;
   left: 0;
 }
 
@@ -177,11 +190,9 @@ textarea{
   z-index: 4; /* تجعل الصورة المتحركة في المقدمة */
 }
 
-
 .footerContent{
   margin: 2%;
   padding: 2%;
-  color: var(--color1);
 }
 .footerContent h2 , .footerContent h3{
   color: var(--color2);
@@ -189,7 +200,7 @@ textarea{
 
 .footerContent a{
   text-decoration: none;
-  color: var(--color1);
+  color: rgb(27, 27, 27);
 }
 
 .footerContent a:hover{
@@ -207,9 +218,8 @@ textarea{
 
 
 .footerHeader{
-  margin-top: -30px;
   height: 100px;
-  background: var(--color2);
+  background: var(--color1);
   justify-content:center ;
   align-items: center;
   padding: 2% 1%;
@@ -333,6 +343,41 @@ textarea{
 
 .button-64:hover span {
   background: none;
+}
+
+/* CSS */
+.button-52 {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-decoration: none;
+  color: var(--color1);
+}
+
+.button-52:after {
+  content: "";
+  background-color: var(--color2);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
 }
 
 .scroll-container {
@@ -501,10 +546,30 @@ textarea{
 .productImgs:hover{
   transform: scale(1.05);
 }
+.rows {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
 
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
 @media (max-width:1000px) {
-  body{
+  .firstContent{
     background-position: center;
+  }
+
+  .categoryList{
+    background-size: 120% 75%;
+  }
+
+  .button-52 {
+    padding: 13px 50px 13px;
+  }
+
+  svg{
+    top: 0;
   }
   
   .button-64 {
@@ -526,9 +591,6 @@ textarea{
     padding: 0;
     width: 94%;
     margin: 1% 3% ;
-  }
-  .logo{
-    height: 70px;
   }
 
   .slideshow {

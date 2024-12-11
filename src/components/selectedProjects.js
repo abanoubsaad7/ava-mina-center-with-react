@@ -1,0 +1,122 @@
+import React, { useState, useEffect, useRef } from "react";
+import axios from "axios";
+const SelectedProjects = ({ selectedCategory }) => {
+  const [projects, setProjects] = useState([]);
+  const cardRefs = useRef([]);
+  const apiURL = `https://node.api.design-house.art/server/v1/display/select-projects?selectedCategory=${selectedCategory}`;
+  useEffect(() => {
+    axios
+      .get(apiURL)
+      .then((response) => {
+        setProjects(response.data.projectsArr);
+      })
+      .catch((err) => {
+        console.log("err while fetch selected product:>> ", err);
+      });
+  }, [apiURL]);
+
+  useEffect(() => {
+    // Set up IntersectionObserver
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+            observer.unobserve(entry.target); // Stop observing once the animation is triggered
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Trigger when 10% of the element is visible
+      }
+    );
+
+    cardRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect(); // Clean up observer on unmount
+  }, [projects]);
+
+  if (!projects) {
+    return <div>loading.....</div>;
+  }
+  return (
+    <>
+      <div className="productsContainer">
+        <h1 style={{ direction: "rtl" }}>خدماتنا</h1>
+        <div>
+          {projects.map((project, index) => (
+            <center
+              key={index}
+              className="categoryWithoutPhoto hidden-from-top"
+              ref={(el) => (cardRefs.current[index] = el)}
+            >
+              <h3
+                key={index}
+                style={{
+                  color: "#FA961F",
+                  padding: "2% 0",
+                  border: "solid 3px #FA961F",
+                  borderRadius: "10px",
+                }}
+              >
+                {project.title}
+                <span
+                  style={{
+                    color: "#f0f0f0",
+                    fontSize: "65%",
+                    
+                  }}
+                >
+                  {" "}
+                  {project.category}{" "}
+                </span>
+              </h3>
+              <img
+                src={`https://node.api.design-house.art/uploads/productCoverImg/${project.coverPhoto}`}
+                width={"100%"}
+                alt="..."
+                style={{
+                  borderRadius: "20px",
+                  boxShadow: "5px 10px 8px #000000",
+                }}
+              />
+              <br />
+              <br />
+              <div>
+                <h4 className="smallFontSize">
+                  {project.describtion}
+                </h4>
+              </div>
+              <div
+                className="scroll-container hidden-from-left"
+                style={{ backgroundColor: "#06073666", minHeight: "200px" }}
+                key={index}
+                ref={(el) => (cardRefs.current[index + 10] = el)}
+              >
+                {project.projectPhotos
+                  ?.split(",") // Split the string into an array
+                  .map((projectImg, imgIndex) => (
+                    <img
+                      key={imgIndex}
+                      src={`https://node.api.design-house.art/uploads/productImgs/${projectImg.trim()}`}
+                      alt={`Project ${imgIndex + 1}`}
+                      style={{
+                        margin: "5px 2px",
+                        maxWidth: "50%",
+                        height: "150px",
+                      }}
+                      className="productImgs"
+                    />
+                  ))}
+              </div>
+            </center>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default SelectedProjects;
