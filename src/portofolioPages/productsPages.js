@@ -21,7 +21,7 @@ const ProductsPages = () => {
             <div
               className="row container"
               style={{
-                border: "3px dashed #FA961F",
+                border: "3px dashed #0976bb",
                 borderRadius: "10px",
                 padding: "3% 0",
               }}

@@ -436,7 +436,7 @@ textarea{
 
 .categoryWithoutPhoto{
   /* background: #06073671; */
-  background: #4e076629;
+  background: #0d076629;
   margin: 2%;
   padding: 3% 5%;
   border-radius: 10px;
@@ -522,7 +522,7 @@ textarea{
 }
 
 .productsContainer{
-  background: #d2d0d329;
+  background: #0976bb;
   margin: 2%;
   padding: 3% 2%;
   border-radius: 10px;
