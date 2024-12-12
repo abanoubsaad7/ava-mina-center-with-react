@@ -124,31 +124,13 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a
-                href="https://www.behance.net/georgefawzy"
-                target="_blank"
-                rel="noreferrer"
-              >
-                behance
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.youtube.com/@Designhouse2024/featured"
-                target="_blank"
-                rel="noreferrer"
-              >
-                youtube
-              </a>
-            </li>
-            <li>
               <a href="mailto:designhouse127@gmail.com">
                 designhouse127@gmail.com
               </a>
             </li>
             <li>
               <a href="#!" style={{ whiteSpace: "nowrap" }}>
-                <i className="fa-solid fa-location-dot"></i> شارع 5 مساكن الضباط
+                <i className="fa-solid fa-location-dot"></i> كنيسة مارجرجس والسامرية -
                 شبرا الخيمة
               </a>
             </li>
