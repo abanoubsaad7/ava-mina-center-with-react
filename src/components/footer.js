@@ -124,8 +124,8 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="mailto:designhouse127@gmail.com">
-                designhouse127@gmail.com
+              <a href="mailto:ava.mina.center@gmail.com">
+                ava.mina.center@gmail.com
               </a>
             </li>
             <li>
