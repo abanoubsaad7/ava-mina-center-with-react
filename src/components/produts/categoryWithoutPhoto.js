@@ -59,7 +59,7 @@ const CategoryWithoutPhoto = () => {
               borderRadius: "10px",
             }}
           >
-            <h2 style={{ color: "#0976bb" }}>{item.name}</h2>
+            <h2 style={{ color: "#0d4f77" }}>{item.name}</h2>
             <p className="smallFontSize">{item.describtion}</p>
           </div>
         </div>

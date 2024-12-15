@@ -27,7 +27,7 @@ const AboutUsPage = () => {
       <section>
         <div style={{ padding: "2%", marginTop: "3%" }}>
           <center>
-            <h1 style={{ color: "#0976bb" }}>{aboutUsContent.companyName}</h1>
+            <h1 style={{ color: "#0d4f77" }}>{aboutUsContent.companyName}</h1>
           </center>
           <div className="categoryWithoutPhoto smallFontSize" style={{justifyContent:"center" , direction:"rtl"}} >
             <h3>{aboutUsContent.description}</h3>

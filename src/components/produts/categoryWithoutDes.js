@@ -99,8 +99,8 @@ const CategoryWithoutDes = () => {
                 </div>
                 <h2
                   style={{
-                    color: "#0976bb",
-                    border: "solid 3px #0976bb",
+                    color: "#0d4f77",
+                    border: "solid 3px #0d4f77",
                     borderRadius: "15px",
                     padding: "2%",
                   }}
@@ -131,7 +131,7 @@ const CategoryWithoutDes = () => {
   return (
     <div style={{ direction: "rtl", padding: "2%" }}>
       <center>
-        <h1 style={{ color: "#0976bb" }}>خدمات Ava Mina Center</h1>
+        <h1 style={{ color: "#0d4f77" }}>خدمات Ava Mina Center</h1>
       </center>
       <center>
         <div className="categoryWithoutDes row">{categoriesData()}</div>

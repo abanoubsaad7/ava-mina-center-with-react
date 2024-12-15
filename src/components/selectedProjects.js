@@ -56,9 +56,9 @@ const SelectedProjects = ({ selectedCategory }) => {
               <h3
                 key={index}
                 style={{
-                  color: "#FA961F",
+                  color: "#0d4f77",
                   padding: "2% 0",
-                  border: "solid 3px #FA961F",
+                  border: "solid 3px #0d4f77",
                   borderRadius: "10px",
                 }}
               >

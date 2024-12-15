@@ -54,7 +54,7 @@ const FeaturedProducts = () => {
             alt="..."
           />
           <div className="card-body">
-            <h3 className="card-title" style={{ color: "#0976bb" }}>
+            <h3 className="card-title" style={{ color: "#0d4f77" }}>
               {item.name}
             </h3>
             <p
@@ -83,7 +83,7 @@ const FeaturedProducts = () => {
   return (
     <div style={{ direction: "rtl", padding: "2%" }}>
       <center>
-        <h1 style={{ color: "#0976bb" }}> خدمات Ava Mina Center </h1>
+        <h1 style={{ color: "#0d4f77" }}> خدمات Ava Mina Center </h1>
       </center>
       <div className="scroll-container">{categoriesData()}</div>
     </div>
