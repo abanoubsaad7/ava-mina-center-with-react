@@ -71,7 +71,7 @@ const FeaturedProducts = () => {
                 className="btn button-64"
                 style={{ width: "70%" }}
               >
-                <span>اعرف اكتر</span>
+                <span><i className="fa-solid fa-arrow-right"></i></span>
               </a>
             </center>
           </div>
