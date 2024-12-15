@@ -54,7 +54,7 @@ const Footer = () => {
   const whatsAppLink = `https://wa.me/${accounts.whatsApp.phone}`;
 
   return (
-    <footer style={{ direction: "rtl", zIndex: "2" }}>
+    <footer style={{ direction: "rtl", zIndex: "2", marginTop:"3%"}}>
       <center>
         <div
           className="row container footerHeader hidden-from-top"
@@ -78,7 +78,7 @@ const Footer = () => {
               src="/img/logo-no-bg.png"
               width="40%"
               alt="..."
-              className="logo"
+              className="logo2"
             />
           </center>
           <p className="smallFontSize">{aboutUsContent.description}</p>
@@ -129,7 +129,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#!" style={{ whiteSpace: "nowrap" }}>
+              <a href="https://maps.app.goo.gl/T6RmTUbELPqrUavEA" style={{ whiteSpace: "nowrap" }}>
                 <i className="fa-solid fa-location-dot"></i> كنيسة مارجرجس والسامرية -
                 شبرا الخيمة
               </a>

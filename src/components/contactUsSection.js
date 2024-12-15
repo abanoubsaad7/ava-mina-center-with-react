@@ -23,17 +23,16 @@ const ContactUsSection = () => {
   return (
     <div className="contact-us" style={{ direction: "rtl" }}>
       <div className="contact-header">
-        <h2>كن على تواصل معنا</h2>
-        <p>نرحب دوماً بالرد على استفساراتكم</p>
+        <h1>كن على تواصل معنا</h1>
       </div>
       <div className="contact-content">
         <div className="contact-info">
           <div className="info-item">
             <img
-              src="/img/design-house.png"
-              className="logo"
+              src="/img/logo-no-bg.png"
+              className="logo2"
               alt="...."
-              width={"80%"}
+              width={"30%"}
             />
           </div>
           <div className="info-item">

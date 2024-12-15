@@ -1,7 +1,6 @@
 import React from "react";
 import MainNav from "../components/main_and_side_Bar/mainNav";
 import Footer from "../components/footer";
-// import CoverSection from "../components/coverSection";
 import ContactUsSection from "../components/contactUsSection";
 
 const ContactUsPage = () => {
@@ -11,7 +10,6 @@ const ContactUsPage = () => {
         <MainNav />
       </section>
       <ContactUsSection/>
-      {/* <CoverSection/> */}
       <Footer/>
     </>
   );

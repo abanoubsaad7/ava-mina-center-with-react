@@ -54,7 +54,7 @@ const FeaturedProducts = () => {
             alt="..."
           />
           <div className="card-body">
-            <h3 className="card-title" style={{ color: "#FA961F" }}>
+            <h3 className="card-title" style={{ color: "#0976bb" }}>
               {item.name}
             </h3>
             <p

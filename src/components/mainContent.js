@@ -2,13 +2,20 @@ import React from "react";
 
 const MainContent = () => {
   return (
-    <div className="row container" style={{ direction: "rtl" , paddingBlock:"4%" }}>
-      <div className="col-lg-5">
-        <h1>مركز الكورسات المتخصصة</h1>
-        <br />
-        <br />
+    <div
+      className="row container"
+      style={{ direction: "rtl", paddingBlock: "4%" }}
+    >
+      <div
+        className="col-lg-5"
+        style={{ alignItems: "center", justifyContent: "center" }}
+      >
         <center>
-          <button className="btn btn-lg btn-warning">تواصل معنا</button>
+          <h2>كنيسة مارجرجس والسامرية</h2>
+          <br />
+          <h1 style={{color:"rgb(12, 89, 137)"}}>مـــــركــــز اڤـــــا مـــيــنـــا</h1>
+          <br />
+          <h2>للكمبيوتر واللغات</h2>
         </center>
       </div>
       <div className="col-lg-6">
@@ -16,7 +23,7 @@ const MainContent = () => {
           <img
             src="/img/Programming-amico.svg"
             alt="..."
-            className="logo"
+            className="logo2"
             width={"70%"}
             height={"450px"}
           />

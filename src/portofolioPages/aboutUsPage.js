@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import MainNav from "../components/main_and_side_Bar/mainNav";
 import Footer from "../components/footer";
 import axios from "axios";
-import CoverSection from "../components/coverSection";
 
 const AboutUsPage = () => {
   const [aboutUsContent, setAboutUsContent] = useState(null);
@@ -28,14 +27,13 @@ const AboutUsPage = () => {
       <section>
         <div style={{ padding: "2%", marginTop: "3%" }}>
           <center>
-            <h1 style={{ color: "#FA961F" }}>{aboutUsContent.companyName}</h1>
+            <h1 style={{ color: "#0976bb" }}>{aboutUsContent.companyName}</h1>
           </center>
-          <div className="categoryWithoutPhoto smallFontSize">
+          <div className="categoryWithoutPhoto smallFontSize" style={{justifyContent:"center" , direction:"rtl"}} >
             <h3>{aboutUsContent.description}</h3>
           </div>
         </div>
       </section>
-      <CoverSection />
       <Footer />
     </>
   );

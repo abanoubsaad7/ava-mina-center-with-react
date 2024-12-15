@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import MainNav from "../components/main_and_side_Bar/mainNav";
 import Footer from "../components/footer";
-import CoverSection from "../components/coverSection";
 import CategoriesSelectionTag from "../components/categoriesSelectionTag";
 import SelectedProjects from "../components/selectedProjects";
 
@@ -40,7 +39,6 @@ const ProductsPages = () => {
           <SelectedProjects selectedCategory={selectedCategory} />
         </div>
       </section>
-      <CoverSection />
       <Footer />
     </>
   );
