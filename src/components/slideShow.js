@@ -73,7 +73,7 @@ const SlideShow = () => {
         </div>
         <br/>
         <h2 style={{ direction: "rtl", color: "#EE1C25" }}>تنبيه هااااام</h2>
-        <h3 style={{ direction: "rtl", color: "#0d4f77" }}>
+        <h3 style={{ direction: "rtl", color: "#0d4f77" , paddingInline:"4%"}}>
           الإعلانات على مسؤليه المعلن دون ادنى مسؤليه على الكنيسه والمركز...عليك التأكد من صحته ومصدره
         </h3>
       </center>

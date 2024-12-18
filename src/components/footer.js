@@ -155,7 +155,6 @@ const Footer = () => {
         }}
       >
         <center style={{ height:"30%"}}>
-          <h3 className="smallFontSize" style={{ display: "inline" }}>Designed and Developed by </h3>
           <div style={{display:"inline"}}>
             <a href="https://wa.me/+201011855638" className="dev">
               <img
