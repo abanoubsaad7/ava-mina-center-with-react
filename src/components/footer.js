@@ -150,20 +150,17 @@ const Footer = () => {
           alignItems: "center",
           backgroundColor: " #F7F7F7",
           width: "100%",
-          // height: "fit-content",
           padding: "1%",
           marginBottom: "2%",
         }}
       >
         <center style={{ height:"30%"}}>
-          <h4 style={{ display: "inline" }}>Designed and Developed by </h4>
+          <h3 className="smallFontSize" style={{ display: "inline" }}>Designed and Developed by </h3>
           <div style={{display:"inline"}}>
             <a href="https://wa.me/+201011855638" className="dev">
               <img
                 src="/img/pyrmids-code-logo-no-bg.png"
                 alt="..."
-                width={"15%"}
-                height={"100%"}
                 className="logo"
               />
             </a>
