@@ -51,7 +51,7 @@ const CategoryWithoutPhoto = () => {
       >
         <div className="col-md-6 text-center">
           <div
-            className="hidden-from-left"
+            className={`${ index % 2 === 0 ? "hidden-from-left": "hidden-from-right" }`}
             ref={(el) => (cardRefs.current[index] = el)}
             style={{
               padding: "20px",

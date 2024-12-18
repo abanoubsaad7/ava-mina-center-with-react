@@ -26,7 +26,7 @@ const SlideShow = () => {
       setCurrentIndex((prevIndex) =>
         projects.length > 0 ? (prevIndex + 1) % projects.length : 0
       );
-    }, 5000); // Change slide every 5 seconds
+    }, 8000); // Change slide every 5 seconds
 
     return () => clearInterval(timer); // Cleanup timer on component unmount
   }, [projects]);
@@ -34,13 +34,13 @@ const SlideShow = () => {
   return (
     <>
       <center>
-        <h1 style={{ direction: "rtl", color: "#0d4f77" }}>اعــلانــات</h1>
+        <h1 style={{ direction: "rtl", color: "#0d4f77" }}>إعــلانــات</h1>
       </center>
       <div className="slideshow">
         {projects.length > 0 ? (
           projects.map((project, index) => (
             <center key={index}>
-              <div >
+              <div>
                 <img
                   src={`${APIURL}/uploads/productCoverImg/${project.coverPhoto}`}
                   alt={project.name || "Project Image"}
@@ -56,8 +56,25 @@ const SlideShow = () => {
         )}
       </div>
       <center>
+        <h2>للإعلان</h2>
+        <div>
+          <h4>
+            <span>📞</span>
+            <a href="tel:+201278644499">
+              01278644499
+            </a>
+          </h4>
+          <h4>
+            <i class="fa-brands fa-whatsapp"></i>
+            <a href="https://wa.me/+201507110328">
+              01507110328
+            </a>
+          </h4>
+        </div>
+        <br/>
+        <h2 style={{ direction: "rtl", color: "#EE1C25" }}>تنبيه هااااام</h2>
         <h3 style={{ direction: "rtl", color: "#0d4f77" }}>
-          المركز والكنيسة غير مسؤولين عن الاعلانات والمسؤول عنها هو المعلن
+          الإعلانات على مسؤليه المعلن دون ادنى مسؤليه على الكنيسه والمركز...عليك التأكد من صحته ومصدره
         </h3>
       </center>
     </>

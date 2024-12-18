@@ -609,6 +609,7 @@ textarea {
 
 @media (max-width: 1000px) {
   .firstContent {
+    overflow-x: hidden;
     background-position: center;
   }
   .firstContent h1  {
