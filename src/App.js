@@ -3,7 +3,6 @@ import MainContent from "./components/mainContent";
 import CategoryWithoutPhoto from "./components/produts/categoryWithoutPhoto";
 import FeaturedProducts from "./components/produts/featuredProducts";
 import Footer from "./components/footer";
-import CategoryWithoutDes from "./components/produts/categoryWithoutDes";
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
         <MainContent />
         <FeaturedProducts />
         <CategoryWithoutPhoto />
-        <CategoryWithoutDes/>
         <Footer />
       </div>
     </>

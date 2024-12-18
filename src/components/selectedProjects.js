@@ -56,10 +56,12 @@ const SelectedProjects = ({ selectedCategory }) => {
               <h3
                 key={index}
                 style={{
-                  color: "#0d4f77",
+                  color: "#EE1C25",
                   padding: "2% 0",
-                  border: "solid 3px #0d4f77",
+                  border: "solid 3px #EE1C25",
+                  boxShadow:"2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff,-1px -1px #fff, 1px -1px #fff, -1px 1px #fff",
                   borderRadius: "10px",
+                  textShadow:"2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff,-1px -1px #fff, 1px -1px #fff, -1px 1px #fff"
                 }}
               >
                 {project.title}
@@ -67,7 +69,7 @@ const SelectedProjects = ({ selectedCategory }) => {
                   style={{
                     color: "#f0f0f0",
                     fontSize: "65%",
-                    
+                    textShadow:"2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000,-1px -1px #000, 1px -1px #000, -1px 1px #000"
                   }}
                 >
                   {" "}

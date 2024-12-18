@@ -47,7 +47,7 @@ h1,h2{
 }
 
 .dev:hover {
-  color: navy;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
 }
 
 .sideBar {
@@ -450,6 +450,11 @@ textarea {
 .scroll-container .btn {
   margin-top: 10px;
 }
+.card-text{
+  color: #f0f0f0;
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000,
+    -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
 
 .categoryWithoutPhoto {
   /* background: #06073671; */
@@ -613,7 +618,7 @@ textarea {
     font-size: 30px;
   }
   .firstContent h2  {
-    font-size: 25px;
+    font-size: 27px;
   }
 
   .categoryList {

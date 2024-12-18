@@ -11,11 +11,10 @@ const MainContent = () => {
         style={{ alignItems: "center", justifyContent: "center" }}
       >
         <center>
-          <h2>كنيسة مارجرجس والسامرية</h2>
           <br />
-          <h1 style={{color:" #0d4f77"}}>مـــــركــــز اڤـــــا مـــيــنـــا</h1>
+          <h1 style={{color:" #EE1C25"}}>مـــــركــــز اڤـــــا مـــيــنـــا للكمبيوتر و اللغات</h1>
           <br />
-          <h2>للكمبيوتر واللغات</h2>
+          <h2>كنيسة مارجرجس والسامرية   شبرا الخيمة - كوبري عرابي</h2>
         </center>
       </div>
       <div className="col-lg-6">

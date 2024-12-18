@@ -54,7 +54,7 @@ const Footer = () => {
   const whatsAppLink = `https://wa.me/${accounts.whatsApp.phone}`;
 
   return (
-    <footer style={{ direction: "rtl", zIndex: "2", marginTop:"3%"}}>
+    <footer style={{ direction: "rtl", zIndex: "2", marginTop: "3%" }}>
       <center>
         <div
           className="row container footerHeader hidden-from-top"
@@ -64,7 +64,10 @@ const Footer = () => {
             <h2>لمعرفة المزيد من الخدمات </h2>
           </div>
           <div className="col-lg-5">
-            <a href="/serveice" className="button-52"> اطلب الان </a>
+            <a href="/serveice" className="button-52">
+              {" "}
+              اطلب الان{" "}
+            </a>
           </div>
         </div>
       </center>
@@ -129,13 +132,43 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="https://maps.app.goo.gl/T6RmTUbELPqrUavEA" style={{ whiteSpace: "nowrap" }}>
-                <i className="fa-solid fa-location-dot"></i> كنيسة مارجرجس والسامرية -
-                شبرا الخيمة
+              <a
+                href="https://maps.app.goo.gl/T6RmTUbELPqrUavEA"
+                style={{ whiteSpace: "nowrap" }}
+              >
+                <i className="fa-solid fa-location-dot"></i> كنيسة مارجرجس
+                والسامرية - شبرا الخيمة
               </a>
             </li>
           </ul>
         </div>
+      </div>
+      <div
+        style={{
+          direction: "ltr",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: " #F7F7F7",
+          width: "100%",
+          // height: "fit-content",
+          padding: "1%",
+          marginBottom: "2%",
+        }}
+      >
+        <center style={{ height:"30%"}}>
+          <h4 style={{ display: "inline" }}>Designed and Developed by </h4>
+          <div style={{display:"inline"}}>
+            <a href="https://wa.me/+201011855638" className="dev">
+              <img
+                src="/img/pyrmids-code-logo-no-bg.png"
+                alt="..."
+                width={"15%"}
+                height={"100%"}
+                className="logo"
+              />
+            </a>
+          </div>
+        </center>
       </div>
     </footer>
   );

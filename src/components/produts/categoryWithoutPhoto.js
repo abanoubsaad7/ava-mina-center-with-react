@@ -55,11 +55,11 @@ const CategoryWithoutPhoto = () => {
             ref={(el) => (cardRefs.current[index] = el)}
             style={{
               padding: "20px",
-              background: index % 2 === 0 ? "#f9f9f9" : "#eaeaea", // ألوان تبادلية
+              background: index % 2 === 0 ? "#eaeaea" : "#f9f9f9", // ألوان تبادلية
               borderRadius: "10px",
             }}
           >
-            <h2 style={{ color: "#0d4f77" }}>{item.name}</h2>
+            <h2 style={{ direction: "rtl", color: "#0d4f77" }}>{item.name}</h2>
             <p className="smallFontSize">{item.describtion}</p>
           </div>
         </div>
@@ -68,9 +68,9 @@ const CategoryWithoutPhoto = () => {
   };
   
   return (
-    <div style={{ direction: "rtl", padding: "2%" }}>
+    <div style={{  padding: "2%" }}>
       <center>
-        <h1 style={{ color: "#0976bb" }}>
+        <h1 style={{direction: "rtl", color: "#0d4f77" }}>
           خدمات Ava Mina Center
         </h1>
       </center>
