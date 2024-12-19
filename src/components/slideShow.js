@@ -4,7 +4,8 @@ import axios from "axios";
 const APIURL = process.env.REACT_APP_API_URL;
 
 const SlideShow = () => {
-  const apiURL = `${APIURL}/server/v1/display/select-projects?selectedCategory=`;
+  const selectedCategory = 'اعلانات';
+  const apiURL = `${APIURL}/server/v1/display/select-projects?selectedCategory=${selectedCategory}`;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [projects, setProjects] = useState([]);
 

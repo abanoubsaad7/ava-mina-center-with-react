@@ -88,7 +88,7 @@ const SelectedProjects = ({ selectedCategory }) => {
               <br />
               <br />
               <div>
-                <h4 className="smallFontSize">
+                <h4 className="smallFontSize" style={{color: "#f0f0f0",}}>
                   {project.describtion}
                 </h4>
               </div>
