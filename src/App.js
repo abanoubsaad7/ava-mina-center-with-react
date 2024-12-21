@@ -4,6 +4,8 @@ import CategoryWithoutPhoto from "./components/produts/categoryWithoutPhoto";
 import FeaturedProducts from "./components/produts/featuredProducts";
 import Footer from "./components/footer";
 import SlideShow from "./components/slideShow";
+import ReviewSlideShow from "./components/reviewSlideShow";
+import AvaminacenterPhotoSlideShow from "./components/avaminacenterPhotoSlideShow";
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
         <MainContent />
         <SlideShow/>
         <FeaturedProducts />
+        <AvaminacenterPhotoSlideShow/>
         <CategoryWithoutPhoto />
+        <ReviewSlideShow/>
         <Footer />
       </div>
     </>

@@ -66,7 +66,7 @@ const Footer = () => {
           <div className="col-lg-5">
             <a href="/serveice" className="button-52">
               {" "}
-              اطلب الان{" "}
+              اعرف اكثر{" "}
             </a>
           </div>
         </div>

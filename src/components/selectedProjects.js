@@ -59,9 +59,11 @@ const SelectedProjects = ({ selectedCategory }) => {
                   color: "#EE1C25",
                   padding: "2% 0",
                   border: "solid 3px #EE1C25",
-                  boxShadow:"2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff,-1px -1px #fff, 1px -1px #fff, -1px 1px #fff",
+                  boxShadow:
+                    "2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff,-1px -1px #fff, 1px -1px #fff, -1px 1px #fff",
                   borderRadius: "10px",
-                  textShadow:"2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff,-1px -1px #fff, 1px -1px #fff, -1px 1px #fff"
+                  textShadow:
+                    "2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff,-1px -1px #fff, 1px -1px #fff, -1px 1px #fff",
                 }}
               >
                 {project.title}
@@ -69,7 +71,8 @@ const SelectedProjects = ({ selectedCategory }) => {
                   style={{
                     color: "#f0f0f0",
                     fontSize: "65%",
-                    textShadow:"2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000,-1px -1px #000, 1px -1px #000, -1px 1px #000"
+                    textShadow:
+                      "2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000,-1px -1px #000, 1px -1px #000, -1px 1px #000",
                   }}
                 >
                   {" "}
@@ -88,32 +91,34 @@ const SelectedProjects = ({ selectedCategory }) => {
               <br />
               <br />
               <div>
-                <h4 className="smallFontSize" style={{color: "#f0f0f0",}}>
+                <h4 className="smallFontSize" style={{ color: "#f0f0f0" }}>
                   {project.describtion}
                 </h4>
               </div>
-              <div
-                className="scroll-container hidden-from-left"
-                style={{ backgroundColor: "#06073666", minHeight: "200px" }}
-                key={index}
-                ref={(el) => (cardRefs.current[index + 10] = el)}
-              >
-                {project.projectPhotos
-                  ?.split(",") // Split the string into an array
-                  .map((projectImg, imgIndex) => (
-                    <img
-                      key={imgIndex}
-                      src={`${APIURL}/uploads/productImgs/${projectImg.trim()}`}
-                      alt={`Project ${imgIndex + 1}`}
-                      style={{
-                        margin: "5px 2px",
-                        maxWidth: "50%",
-                        height: "150px",
-                      }}
-                      className="productImgs"
-                    />
-                  ))}
-              </div>
+
+              {project.projectPhotos && (
+                <div
+                  className="scroll-container"
+                  style={{ backgroundColor: "#06073666", minHeight: "200px" }}
+                  key={index}
+                >
+                  {project.projectPhotos
+                    .split(",") // Split the string into an array
+                    .map((projectImg, imgIndex) => (
+                      <img
+                        key={imgIndex}
+                        src={`${APIURL}/uploads/productImgs/${projectImg.trim()}`}
+                        alt={`Project ${imgIndex + 1}`}
+                        style={{
+                          margin: "5px 2px",
+                          maxWidth: "50%",
+                          height: "150px",
+                        }}
+                        className="productImgs"
+                      />
+                    ))}
+                </div>
+              )}
             </center>
           ))}
         </div>
