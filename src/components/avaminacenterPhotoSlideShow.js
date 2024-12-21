@@ -52,7 +52,7 @@ const AvaminacenterPhotoSlideShow = () => {
       setCurrentIndex((prevIndex) =>
         slides.length > 0 ? (prevIndex + 1) % slides.length : 0
       );
-    }, 1500); // Change slide every 1.5 seconds
+    }, 1000); // Change slide every 1.5 seconds
 
     return () => clearInterval(timer); // Cleanup timer on component unmount
   }, [slides]);
